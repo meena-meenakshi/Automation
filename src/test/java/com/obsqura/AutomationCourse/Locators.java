@@ -37,14 +37,35 @@ public void webLocators() {
 	WebElement radiobutton = driver.findElement(By.partialLinkText("Radio Buttons"));
 	WebElement ajaxform = driver.findElement(By.partialLinkText("Ajax Form"));
 	
-	//***********************find element by xpath*************************************************
+	//***********************find element by xpath***************************************************
 	
-	WebElement showmsgbutton = driver.findElement(By.xpath("//button[@id='button-one']"));
+	WebElement showmsgbutton = driver.findElement(By.xpath("//button[@id='button-one']"));//basic xpath
+	WebElement chekbox =driver.findElement(By.xpath("//a[contains(@href,'check-box')]"));// contains()
+	
+	WebElement checkbox2 = driver.findElement(By.xpath("//a[starts-with(@href,'check-box')]"));//starts-with()
+	WebElement  ajaxform1 = driver.findElement(By.xpath("//a[starts-with(@href,'ajax-form')]"));
+	WebElement formsubmit = driver.findElement(By.xpath("//a[starts-with(@href,'form-submit')]"));
+	
+	WebElement showmsg = driver.findElement(By.xpath("//button[text()='Show Message']"));// Text()
+	WebElement gettotal= driver.findElement(By.xpath("//button[text()='Get Total']"));
+	WebElement yourmsg = driver.findElement(By.xpath("//div[text()='Your Message : ']"));
+	
+	
+	WebElement butn = driver.findElement(By.xpath("//button[@type='button' and @id='button-one' ]"));// and
+	WebElement butn1 = driver.findElement(By.xpath("//button[@type='button' and @id='button-two' ]"));
+	WebElement meesage= driver.findElement(By.xpath("//input[@class='form-control' and @id='single-input-field']"));
+	WebElement btn = driver.findElement(By.xpath("//button[contains(@id,'button-one') and @class='btn btn-primary']"));
+	
+	WebElement showms1 = driver.findElement(By.xpath("//button[@type='button123' or @id='button-one']"));//or
+	WebElement entermsg = driver.findElement(By.xpath("//input[ @id='single-input-field' or @placeholder='Message']"));
+	WebElement button1 = driver.findElement(By.xpath("//button[@id='button-one' or @class='btn btn-primary1']"));
 	
 	
 	
 	
-	//****************************************************************************************
+	
+	
+//**************************************************************************************************************
 	driver.navigate().to("https://ultimateqa.com/complicated-page");
 	WebElement menusearch = driver.findElement(By.xpath("//div[contains(@class,'et_pb_menu__search-container')]"));
 	WebElement buton = driver.findElement(By.xpath("//a[contains(@class,'et_pb_button et_pb_button_0')]"));
